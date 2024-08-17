@@ -1,0 +1,35 @@
+{
+    "version": "1.0",
+    "file_records": [
+        {
+            "source_url": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Albedo.png",
+            "source_hash": "7c590c906a483dc20bcb919f2a6d6f14b772e031",
+            "target_url": "./DetailedProps/Materials/Textures/Logo_Textures_Albedo.png",
+            "target_hash": "5567c863c1afa0af965bca07b31684f01ff28b01"
+        },
+        {
+            "source_url": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Metallic.png",
+            "source_hash": "83931c4d194ad4527ef103fad80e2d7ba86a4c68",
+            "target_url": "./DetailedProps/Materials/Textures/Logo_Textures_Metallic.png",
+            "target_hash": "4f2e766438c67474c4e13ec49af30abf7f77605b"
+        },
+        {
+            "source_url": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Opacity.png",
+            "source_hash": "3dc70fcb4380f291cf87756926c11bd25f0f3b77",
+            "target_url": "./DetailedProps/Materials/Textures/Logo_Textures_Opacity.png",
+            "target_hash": "643b1d2a5c6e1b8514b9575903b9894fa6867cc3"
+        },
+        {
+            "source_url": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_roughness.png",
+            "source_hash": "4b6f101365a96ed0691a33a6d3a131a3c24df3cf",
+            "target_url": "./DetailedProps/Materials/Textures/Logo_Textures_roughness.png",
+            "target_hash": "c7ee1e27213d4220e60d3a9d4b9e3720496676b9"
+        },
+        {
+            "source_url": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Robots/Franka/DetailedProps/Materials/Textures/normal.png",
+            "source_hash": "61de3fbefc66349c5d5933c4e347e5300821a535",
+            "target_url": "./DetailedProps/Materials/Textures/normal.png",
+            "target_hash": "1e1bd992adf33a114d78e9bebda7b9b5e8deaa80"
+        }
+    ]
+}
