@@ -11,26 +11,37 @@ simulation_app = SimulationApp(launch_config)
 # Locate any other import statement after this point
 from omni.isaac.core.world import World
 from omni.isaac.core.utils.types import ArticulationAction
-from omni.isaac.core.utils.nucleus import get_assets_root_path
 from omni.isaac.core.utils.stage import add_reference_to_stage
 from omni.isaac.core.robots import Robot
+
+#--------------------------------Nucleus Server----------------------------------------------
+# from omni.isaac.core.utils.nucleus import get_assets_root_path
+# # Get isaac sim assets folder root path
+# # It should be "omniverse://localhost/NVIDIA/Assets/Isaac/4.0"
+# assets_root_path = get_assets_root_path()
+# print(assets_root_path)
+# if assets_root_path is None:
+#     print("Could not find nucleus server with '/Isaac' folder")
+# # Get franka in isaac sim official assets folder
+# robot_asset_path = assets_root_path + "/Isaac/Robots/Franka/franka_alt_fingers.usd"
+#-------------------------------------local--------------------------------------------------
+
+#############################################################################################
+#                                   Attention                                               #
+#                                                                                           #
+#  The asset_path of the root_prim add (reference) to the Stage should be Absolute Path!!!  #
+#  As the child_prims are reference to the root_prim usually introduced by Relative Path.   #
+#                                                                                           #
+#############################################################################################
+
+# robot_asset_path = "../asset/Franka/Collected_franka_alt_fingers/franka_alt_fingers.usd"
+robot_asset_path = "/home/crowznl/Dev/isaac/asset/Franka/Collected_franka_alt_fingers/franka_alt_fingers.usd"
+print(robot_asset_path)
 
 # Instantiate World class
 world = World()
 # Add a ground plane to stage and register it in the scene
 world.scene.add_default_ground_plane()
-
-# Get isaac sim assets folder root path
-# It should be "omniverse://localhost/NVIDIA/Assets/Isaac/4.0"
-assets_root_path = get_assets_root_path()
-print(assets_root_path)
-if assets_root_path is None:
-    print("Could not find nucleus server with '/Isaac' folder")
-
-# Get franka in isaac sim official assets folder
-robot_asset_path = assets_root_path + "/Isaac/Robots/Franka/franka_alt_fingers.usd"
-# robot_asset_path = "../asset/Franka/Collected_franka_alt_fingers/franka_alt_fingers.usd"
-print(robot_asset_path)
 
 # Add robot asset reference to stage
 # This will create a new XFormPrim and point it to the usd file as a reference
@@ -82,7 +93,6 @@ for i in range(all_steps):
         print(f"Step {i}: target_joint_positions={target_joint_positions}")
     # Update world
     world.step(render=True)
-
 
 # Close the running Toolkit
 simulation_app.close()
