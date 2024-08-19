@@ -38,9 +38,12 @@
     // 在 Visual Studio Code (VSCode) 中，除了使用插件如 Path Intellisense 来帮助识别文件路径之外，
     // 还有一些内置的方法可以手动配置库文件的位置，如下所示。
 
-    // 但是这个setting文件是直接从isaaclab项目的settings.json文件复制过来，如果要手动改太麻烦了，只好维持这个架构，
+    // 方法一：这个setting文件是直接从isaaclab项目的settings.json文件复制过来，如果要手动改太麻烦了，只好维持这个架构，
     // 所以在我的workspace也创建了isaacsim4.0文件夹的符号链接‘_isaac_sim’，理论上直接给出isaacsim4.0/的路径就可以。
     // 另外，如果你选择使用符号链接，请确保在.gitignore文件中排除这些链接，以避免将其推送到远程仓库。
+
+    // 方法二(更推荐)：用脚本（详情请见../myExt/findenvpath.py）生成一个settings.json文件，找到IsaacSim的配置自动拷贝
+
     "python.analysis.extraPaths": [
         "${workspaceFolder}/_isaac_sim/exts/omni.exporter.urdf",
         "${workspaceFolder}/_isaac_sim/exts/omni.exporter.urdf/pip_prebundle",
